@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build --max_old_space_size=1024000",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
