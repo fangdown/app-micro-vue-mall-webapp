@@ -15,9 +15,9 @@ import router from "../router";
 
 axios.defaults.baseURL =
   import.meta.env.MODE == "development"
-    ? "https://api.git123.cn/proxy/"
+    ? "//backend-api-01.newbee.ltd/api/v1"
     : // ? "http://127.0.0.1:11000/proxy/get?url=http://backend-api-01.newbee.ltd/api/v1"
-      "//backend-api-01.newbee.ltd/api/v1";
+      "https://api.git123.cn/proxy/";
 axios.defaults.withCredentials = true;
 axios.defaults.headers["X-Requested-With"] = "XMLHttpRequest";
 axios.defaults.headers["token"] = localStorage.getItem("token") || "";
