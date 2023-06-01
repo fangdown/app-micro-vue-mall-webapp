@@ -91,7 +91,7 @@ const goTo = () => {
 
 const handleAddCart = async () => {
   const { resultCode } = await addCart({ goodsCount: 1, goodsId: state.detail.goodsId })
-  if (resultCode == 200 ) showSuccessToast('添加成功')
+  if (resultCode == 200) showSuccessToast('添加成功')
   cart.updateCart()
 }
 
@@ -104,94 +104,111 @@ const goToCart = async () => {
 </script>
 
 <style lang="less">
-  @import '../common/style/mixin';
-  .product-detail {
-    .detail-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10000;
-      .fj();
-      .wh(100%, 44px);
-      line-height: 44px;
-      padding: 0 10px;
-      .boxSizing();
-      color: #252525;
-      background: #fff;
-      border-bottom: 1px solid #dcdcdc;
-      .product-name {
-        font-size: 14px;
-      }
-    }
-    .detail-content {
-      height: calc(100vh - 50px);
-      overflow: hidden;
-      overflow-y: auto;
-      .detail-swipe-wrap {
-        .my-swipe .van-swipe-item {
-          img {
-            width: 100%;
-            // height: 300px;
-          }
-        }
-      }
-      .product-info {
-        padding: 0 10px;
-        .product-title {
-          font-size: 18px;
-          text-align: left;
-          color: #333;
-        }
-        .product-desc {
-          font-size: 14px;
-          text-align: left;
-          color: #999;
-          padding: 5px 0;
-        }
-        .product-price {
-          .fj();
-          span:nth-child(1) {
-            color: #F63515;
-            font-size: 22px;
-          }
-          span:nth-child(2) {
-            color: #999;
-            font-size: 16px;
-          }
-        }
-      }
-      .product-intro {
-        width: 100%;
-        padding-bottom: 50px;
-        ul {
-          .fj();
-          width: 100%;
-          margin: 10px 0;
-          li {
-            flex: 1;
-            padding: 5px 0;
-            text-align: center;
-            font-size: 15px;
-            border-right: 1px solid #999;
-            box-sizing: border-box;
-            &:last-child {
-              border-right: none;
-            }
-          }
-        }
-        .product-content {
-          padding: 0 20px;
-          img {
-            width: 100%;
-          }
-        }
-      }
-    }
-    .van-action-bar-button--warning {
-      background: linear-gradient(to right,#6bd8d8, @primary)
-    }
-    .van-action-bar-button--danger {
-      background: linear-gradient(to right, #0dc3c3, #098888)
+@import '../common/style/mixin';
+
+.product-detail {
+  .detail-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    .fj();
+    .wh(100%, 44px);
+    line-height: 44px;
+    padding: 0 10px;
+    .boxSizing();
+    color: #252525;
+    background: #fff;
+    border-bottom: 1px solid #dcdcdc;
+
+    .product-name {
+      font-size: 14px;
     }
   }
-</style>
+
+  .detail-content {
+    height: calc(100vh - 50px);
+    overflow: hidden;
+    overflow-y: auto;
+
+    .detail-swipe-wrap {
+      .my-swipe .van-swipe-item {
+        img {
+          width: 100%;
+          // height: 300px;
+        }
+      }
+    }
+
+    .product-info {
+      padding: 0 10px;
+
+      .product-title {
+        font-size: 18px;
+        text-align: left;
+        color: #333;
+      }
+
+      .product-desc {
+        font-size: 14px;
+        text-align: left;
+        color: #999;
+        padding: 5px 0;
+      }
+
+      .product-price {
+        .fj();
+
+        span:nth-child(1) {
+          color: #F63515;
+          font-size: 22px;
+        }
+
+        span:nth-child(2) {
+          color: #999;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .product-intro {
+      width: 100%;
+      padding-bottom: 50px;
+
+      ul {
+        .fj();
+        width: 100%;
+        margin: 10px 0;
+
+        li {
+          flex: 1;
+          padding: 5px 0;
+          text-align: center;
+          font-size: 15px;
+          border-right: 1px solid #999;
+          box-sizing: border-box;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+
+      .product-content {
+        padding: 0 20px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .van-action-bar-button--warning {
+    background: linear-gradient(to right, #6bd8d8, @primary)
+  }
+
+  .van-action-bar-button--danger {
+    background: linear-gradient(to right, #0dc3c3, #098888)
+  }
+}</style>

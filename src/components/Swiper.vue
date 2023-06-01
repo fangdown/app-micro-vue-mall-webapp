@@ -9,7 +9,7 @@
 -->
 
 <template>
-  <van-swipe class="my-swipe" :autoplay="3000" indicator-color="#1baeae">
+  <van-swipe class="my-swipe" :autoplay="3000" indicator-color="red">
     <van-swipe-item v-for="(item, index) in list" :key="index">
       <img :src="item.carouselUrl" alt="" @click="goTo(item.redirectUrl)">
     </van-swipe-item>
@@ -30,10 +30,10 @@ export default {
 </script>
 
 <style lang='less' scoped>
-  .my-swipe {
-    img {
-      width: 100%;
-      height: 100%;
-    }
+.my-swipe {
+  img {
+    width: 100%;
+    height: 100%;
   }
+}
 </style>
