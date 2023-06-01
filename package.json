@@ -1,10 +1,10 @@
 {
-  "name": "newbee-mall-h5-v3",
+  "name": "app-micro-vue-mall-webapp",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --max_old_space_size=1024000",
     "preview": "vite preview"
   },
   "dependencies": {
